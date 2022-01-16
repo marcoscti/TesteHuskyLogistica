@@ -19,8 +19,8 @@ escrito PHP;
 
 ## 2. Como fazer o Deploy?
 1. Faça o download dos arquivos do repositório
-2. Execute o Arquivo ***husk_db.sql*** que está na raiz do projeto o arquivo já está configurado basta importá-lo no seu gerenciador do mysql.
-3. Se o seu Banco de dados local tiver senha, acesse a pasta: ***App/Model*** e abra o arquivo: ***Conexao.php***, e altere o valor dos atributos $host,$dbname,$username e $password:
+2. Execute o Arquivo ***husk_db.sql*** que está na raiz do projeto, o arquivo já está configurado basta importá-lo no seu gerenciador do mysql.
+3. Se o seu Banco de dados local possuir senha, acesse a pasta: ***App/Model*** e abra o arquivo: ***Conexao.php***, e altere o valor atribuído aos atributos $host,$dbname,$username e $password:
 
 ``` <?php
 
@@ -45,4 +45,4 @@ class Conexao
 }
 ```
 ## 3. Observações
-*O Sistema vai com alguns dados padrão, é possível: cadastrar novos entregadores e clientes para dessa forma criar as entregas*
+*O Sistema vai com alguns dados cadastrados, é possível cadastrar novos entregadores e clientes para dessa forma criar as entregas*
