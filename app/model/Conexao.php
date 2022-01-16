@@ -5,6 +5,7 @@ namespace App\Model;
 class Conexao
 {
     public static $conexao;
+    //configure os dados do seu banco nas linhas abaixo
     public static $host = "localhost";
     public static $dbname = "husky_db";
     public static $username = "root";
