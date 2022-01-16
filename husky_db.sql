@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `husky_db`.`tb_client` (
   `updated_at` DATETIME NULL,
   PRIMARY KEY (`id_client`))
 ENGINE = InnoDB;
-INSERT INTO `tb_client` (`name_client`, `phone_client`, `email_client`, `created_at`) VALUES ('Marcos Cordeiro Soares', '', 'email@email.com', current_timestamp());
+INSERT INTO `tb_client` (`name_client`, `phone_client`, `email_client`, `created_at`) VALUES ('Marcos Cordeiro Soares', '61 9 9999 8888', 'email@email.com', current_timestamp());
 
 -- -----------------------------------------------------
 -- Table `husky_db`.`tb_status`
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `husky_db`.`tb_deliveryman` (
   `email_deliveryman` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id_deliveryman`))
 ENGINE = InnoDB;
-INSERT INTO `tb_deliveryman` (`name_deliveryman`, `phone_deliveryman`, `email_deliveryman`) VALUES ('Entregador Padrão', '61 9 9999-9999', 'dembledore@email.com');
+INSERT INTO `tb_deliveryman` (`name_deliveryman`, `phone_deliveryman`, `email_deliveryman`) VALUES ('Entregador Padrão', '61 9 9999-9999', 'default@email.com');
 
 -- -----------------------------------------------------
 -- Table `husky_db`.`tb_delivery`
