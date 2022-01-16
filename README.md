@@ -20,19 +20,24 @@ escrito PHP;
 ## 2. Como fazer o Deploy?
 1. Faça o download dos arquivos do repositório
 2. Execute o Arquivo ***husk_db.sql*** que está na raiz do projeto o arquivo já está configurado basta importá-lo no seu gerenciador do mysql.
-3. Se o seu Banco de dados local tiver senha, acesse a pasta: ***App/Model*** e abra o arquivo: ***Conexao.php***, acesse a linha 12 e altere como no exemplo abaixo:
+3. Se o seu Banco de dados local tiver senha, acesse a pasta: ***App/Model*** e abra o arquivo: ***Conexao.php***, e altere o valor dos atributos $host,$dbname,$username e $password:
 
-``` namespace App\Model;
+``` <?php
+
+namespace App\Model;
 
 class Conexao
 {
     public static $conexao;
-        
+    public static $host = "localhost";
+    public static $dbname = "husky_db";
+    public static $username = "root";
+    public static $password = "";
+
     public static function conectar()
     {
         if (!isset(self::$conexao)) {
-            //Abaixo coloque as suas informações do banco de dados
-            self::$conexao = new \PDO("mysql:host=NOME_DO_HOST;dbname=husky_db;charset=utf8", "SEU_USUÁRIO","SUA_SENHA");
+            self::$conexao = new \PDO("mysql:host=" . self::$host . ";dbname=" . self::$dbname . ";charset=utf8", self::$username, self::$password);
             self::$conexao->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         }
         return self::$conexao;
